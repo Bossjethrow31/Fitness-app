@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">💪 FitTrack</h1>
+            <ul class="nav-menu">
+                <li><a href="#workout" class="nav-link active">Workout</a></li>
+                <li><a href="#nutrition" class="nav-link">Nutrition</a></li>
+                <li><a href="#exercises" class="nav-link">Exercises</a></li>
+                <li><a href="#scheduler" class="nav-link">Scheduler</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <main class="container">
+        <!-- Workout Tracker Section -->
+        <section id="workout" class="section active">
+            <h1>Workout Tracker</h1>
+            <div class="form-group">
+                <input type="text" id="workoutName" placeholder="Workout name (e.g., Running)">
+                <input type="number" id="workoutDuration" placeholder="Duration (minutes)">
+                <input type="number" id="workoutCalories" placeholder="Calories burned">
+                <button onclick="addWorkout()">Add Workout</button>
+            </div>
+            <div id="workoutList" class="list-container"></div>
+            <p id="totalWorkoutCalories" class="stats">Total Calories Burned: 0</p>
+        </section>
+
+        <!-- Calorie Counter Section -->
+        <section id="nutrition" class="section">
+            <h1>Calorie Counter</h1>
+            <div class="form-group">
+                <input type="text" id="foodName" placeholder="Food name">
+                <input type="number" id="foodCalories" placeholder="Calories">
+                <input type="date" id="foodDate">
+                <button onclick="addFood()">Add Food</button>
+            </div>
+            <div id="foodList" class="list-container"></div>
+            <p id="totalDailyCalories" class="stats">Total Daily Calories: 0</p>
+        </section>
+
+        <!-- Exercise Guide Section -->
+        <section id="exercises" class="section">
+            <h1>Exercise Guide</h1>
+            <div id="exerciseGuide" class="list-container"></div>
+        </section>
+
+        <!-- Personal Trainer Scheduler Section -->
+        <section id="scheduler" class="section">
+            <h1>Personal Trainer Scheduler</h1>
+            <div class="form-group">
+                <input type="text" id="sessionName" placeholder="Session name">
+                <input type="datetime-local" id="sessionDateTime">
+                <input type="text" id="sessionTrainer" placeholder="Trainer name">
+                <button onclick="addSession()">Schedule Session</button>
+            </div>
+            <div id="sessionList" class="list-container"></div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/workout.js"></script>
+    <script src="js/nutrition.js"></script>
+    <script src="js/exercises.js"></script>
+    <script src="js/scheduler.js"></script>
+</body>
+</html>
